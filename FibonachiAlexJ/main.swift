@@ -8,5 +8,15 @@
 
 import Foundation
 
-print("Hello, World!")
-
+func Fibonachi(n: Int) -> [Int]{
+    var seq: [Int] = []
+    
+    seq.append(0)
+    seq.append(1)
+    
+    for i in 2 ..< n + 1 {
+        seq.append(seq[i - 1] + seq[i - 2])
+    }
+    return seq
+}
+print(Fibonachi(n: 16))
